@@ -4,7 +4,7 @@
     </head>
     <body>
         <form>
-            Email <input type="text" id = "email" name="email" maxlength="10">
+            Email <input type="text" id = "email" name="email" maxlength="10" tabindex="1">
             <br>
             <br>
             My Username <input type="text" id="username" name="usernameID" maxlength="10">
@@ -13,10 +13,10 @@
             Password <input type="password" id="passwordID" name="password">
             <br>
             <br>
-            <input type="checkbox" name="checkbox1" id="checkbox1ID" value="Html">
+            <input type="checkbox" name="checkbox1" id="checkbox1ID" value="Html" tabindex="2">
             <label for="checkbox1ID">HTML</label> <!--Use ID for labels-->
             <br>
-            <input type="checkbox" name="checkbox2" id="checkbox2ID" value="CSS">
+            <input type="checkbox" name="checkbox2" id="checkbox2ID" value="CSS" tabindex="3">
             <label for="checkbox2ID">CSS</label>
             <br>
             <input type="checkbox" name="checkbox3" id="checkbox3ID" value="Javascript">
@@ -31,14 +31,31 @@
 
             <br>
             <br>
+            <select id="myCourses">
+                <option value="CPAN 134">CPAN 134</option>
+                <option value="CPAN 133">CPAN 133</option>
+                <option value="CPAN 132">CPAN 132</option>
+                
+            </select>
+
+            <input type = "hidden" value="28" name="hiddenElement" id="myHiddenElement">
+            
+
+            <br>
+            <br>
             <br>
             Comments 
             <br>
 
-        <textarea name="comments" id="commentId" rows="3" cols="20"></textarea>
+        <textarea name="comments" id="commentId" rows="3" cols="20" accesskey="M"></textarea> <!--alt+m will trigger access key-->
         <input type = "submit" name="myButton" id="myButtonID" value="Submit"> <!--Creates a "Submit" button-->
         <input type = "reset" name="myResetButton" id="myResetButton" value="Reset"> <!--Erases all entered in characters in the form-->
 
+        <br>
+        <br>
+        <label for="mySpinner">Choose between 10 and 20</label>
+        <br>
+        <input type="number" min="10" max="20" id="mySpinner" name="spinner">
         </form>
     </body>
 </html>
